@@ -1,28 +1,7 @@
 # ML_Learning_with_label_noise
 Built a transition matrix estimator and two classification algorithms that are robust to label noise.
 
-1 Objective
-
-The objective of this assignment is to implement Non-negative Matrix Factorization (NMF) algorithms and analyze the robustness of NMF algorithms when the dataset is contaminated by large magnitude noise or corruption. More specifically, two NMF algorithms have been implemented and their robustness has been compared.
-
-2 Dataset description
-
-The NMF algorithms have been implemented on two real-world face image datasets: (1) ORL dataset; (2) Extended YaleB dataset.
-
-• ORL dataset: it contains 400 images of 40 distinct subjects (i.e., 10 images per subject). For some subjects, the images were taken at di erent times, varying the lighting, facial expressions and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position. All images are cropped and resized to 92 112 pixels.
-
-• Extended YaleB dataset: it contains 2414 images of 38 subjects under 9 poses and 64 illumination conditions. All images are manually aligned,
-cropped, and then resized to 168 192 pixels.
-
-3 Tasks
-
-1. Need to implement at least two Non-negative Matrix Factorization (NMF) algorithms (e.g., L1-Norm Based NMF, Hypersurface Cost Based NMF, L1-Norm Regularized Robust NMF, and L2;1-Norm Based NMF).
-
-2. For each algorithm, you need to describe the definition of the objective function as well as the optimization methods used in your implementation.
-
-3. You need to analyze the robustness of each algorithm on two datasets:
-
-4. You need to demonstrate each type of noise used in your experiment (show the original image as well as the image contaminated by noise).
-
-5. To compare the performance and robustness of di erent NMF algorithms, we provide three evaluation metrics: (1) Relative Reconstruction Errors; (2) Average Accuracy (optional); (3) Normalized Mutual Information (optional). For all experiments, you need to use at least one metric, i.e., Relative Reconstruction Errors. 
+The objective of this assignment is to build a transition matrix estimator and two classification algorithms that are robust to label noise.
+Three input datasets are given. For each dataset, the training and validation data contains class-conditional random label noise, whereas the test data is clean. You need to build at least two di erent classi ers trained and validated on the noisy data, which can have a good classi cation accuracy on the clean test data. You are required to compare the robustness of the two algorithms to label noise. For the first two datasets, the transition matrices are provided. You can directly use the given transition matrices for designing classi ers that are robust to label
+noise. For the last dataset, the transition matrix is not provided. You are required to build a transition matrix estimator to estimate the transition matrix. Then, employ your estimated transition matrix for classi cation. Your estimated transition matrix must be included in your final report. Note that to validate the effectiveness of your transition matrix estimator, you could use your estimator on the first two datasets and compare your estimation to the given transition matrices. Data prepossessing is allowed, but please remember to clarify and justify it in the report carefully.
 
